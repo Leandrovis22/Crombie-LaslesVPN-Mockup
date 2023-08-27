@@ -1,3 +1,39 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-custom-class {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots {
+  display: inline !important;
+  bottom: 7px !important;
+  width: fit-content !important;
+  position: absolute !important; 
+  z-index: 2;
+}
+
+.slick-dots li button:before {
+  font-size: 22px !important;
+}
+
+.slick-dots li.slick-active button:before {
+
+  color: rgb(255, 68, 68) !important;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: rgb(255, 68, 68) !important;
+}
+
+.despues::before {
+  color: rgb(255, 68, 68) !important;
+}
+
+.antes::before {
+  color: rgb(255, 68, 68) !important;
+}
