@@ -90,7 +90,7 @@ const Carrousel = () => {
         <div>
 
             <h2 className="mt-[5%] font-semibold w-max text-4xl mx-auto">Trusted by Thousands of Happy Customers</h2>
-            <p className="mx-auto w-max pt-9">These are the stories of our customers who have joined us with great pleasure when using this crazy features.</p>
+            <p className="mx-auto w-max pt-9">These are the stories of our customers who have joined us with great pleasure when using these crazy features.</p>
 
 
             <div className=" mb-[10%] ml-20 mr-20 ">
