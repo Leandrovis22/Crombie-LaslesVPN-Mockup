@@ -8,6 +8,7 @@ import Subscription from './Components/Subscription'
 import Componente4 from './Components/Componente4'
 import Carrousel from './Components/Carrousel'
 import Form from './Components/Form'
+import Footer from './Components/Footer'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,5 +19,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Componente4/>
     <Carrousel/>
     <Form/>
+    <Footer/>
   </React.StrictMode>,
 )
