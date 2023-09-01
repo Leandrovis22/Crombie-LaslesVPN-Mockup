@@ -8,7 +8,7 @@ const ThemeManager = () => {
       className={`${theme === "dark" ? "bg-black-800" : "bg-white-800"
         } flex justify-center`}
     >
-      <button onClick={toggleTheme}>
+      <button className="pl-3" onClick={toggleTheme}>
         {theme === "light" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -85,7 +85,7 @@ function Form() {
                                             style={{ zIndex: 1 }}
                                             placeholder="Your Name*"
                                             {...register('fullName')}
-                                            className="w-full text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                            className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                                             type="text"
                                         />
                                         <input
