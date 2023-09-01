@@ -27,9 +27,9 @@ function Componente2() {
 
       </div>
 
-      <div className="object-contain mx-auto pt-20 w-[75%] sm:w-auto">
-        <img src="src/Screenshot_3.png" alt="" />
-      </div>
+      
+        <img className='pt-20 w-full' src="src/Screenshot_3.png" alt="" />
+     
 
 
 

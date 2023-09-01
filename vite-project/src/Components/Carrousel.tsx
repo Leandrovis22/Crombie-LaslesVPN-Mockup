@@ -114,7 +114,7 @@ const Carrousel = () => {
                             className={`${slidesToShow === 1 ? '' : 'max-w-3xl'
                                 } space-x-6 h-[400px] flex items-center my-custom-class`}
                         >
-                            <div className={`flex flex-col py-6 px-8 bg-white rounded-lg shadow-lg ml-3 mr-3 h-[246px] mx-auto text-gray-700 ${theme === "dark" ? "" : "text-white bg-[#471d2c]"}`}>
+                            <div className={`flex flex-col py-6 px-8  rounded-lg shadow-lg ml-3 mr-3 h-[246px] mx-auto text-gray-700 ${theme === "dark" ? "bg-white" : "text-white bg-[#471d2c]"}`}>
                                 <div className="mb-5">
                                     <img src={testimonial.avatar} className="rounded-full w-14 h-14" alt="Avatar" style={{ display: "inline-block" }} />
                                     <p className="inline ml-3 mb-2">{testimonial.fullName}</p>
