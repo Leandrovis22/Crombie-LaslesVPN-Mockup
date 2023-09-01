@@ -1,12 +1,15 @@
 
 import '../styles.css'
+import { useTheme } from './theme-context';
 
 function Footer() {
 
+    const { theme } = useTheme();
+
     return (
 
-        <div style={{ backgroundColor: "#f8f8f8" }}>
-            <div className="grid grid-cols-2 gap-[70px] h-full mx-auto w-4/5 pt-[6%] pb-[6%]">
+        <div className={` ${ theme === "dark" ? "bg-[#f8f8f8]" : "bg-[#151515] text-white"}`} >
+            <div className="grid grid-cols-2 gap-[7%] h-full mx-auto w-4/5  sm:w-11/12">
 
                 <div className="my-auto col-span-1 pr-5">
 
@@ -25,7 +28,7 @@ function Footer() {
 
                 </div>
 
-                <div className="col-span-1 grid gap-10 grid-cols-3 gap-1 pl-10 pt-16 pb-16">
+                <div className="col-span-1 grid gap-10 sm:gap-1 grid-cols-3 gap-1 sm:pl-1 pl-10 pt-16 pb-16">
 
                     <ul>
 

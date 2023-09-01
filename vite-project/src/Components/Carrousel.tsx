@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles.css";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "./theme-context";
 
 
 
@@ -15,6 +16,9 @@ type Testimonial = {
 };
 
 const Carrousel = () => {
+
+    const { theme } = useTheme();
+
     const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string>();
@@ -87,13 +91,13 @@ const Carrousel = () => {
 
 
     return (
-        <div>
+        <div className={` ${ theme === "dark" ? "" : "bg-[#151515] text-white"}`}>
 
-            <h2 className="mt-[5%] font-semibold w-max text-4xl mx-auto">Trusted by Thousands of Happy Customers</h2>
-            <p className="mx-auto w-max pt-9">These are the stories of our customers who have joined us with great pleasure when using these crazy features.</p>
+            <h2 className="pt-[5%] font-semibold w-auto text-center text-4xl mx-auto">Trusted by Thousands of Happy Customers</h2>
+            <p className="mx-auto w-auto text-center pt-9">These are the stories of our customers who have joined us with great pleasure when using these crazy features.</p>
 
 
-            <div className=" mb-[10%] ml-20 mr-20 ">
+            <div className=" pb-[10%] ml-20 mr-20 ">
                 <Slider
                     dots={true}
                     ref={slider}
@@ -101,6 +105,7 @@ const Carrousel = () => {
                     slidesToShow={slidesToShow}
                     slidesToScroll={1}
                     centerMode={false}
+                    arrows={false}
 
                 >
                     {testimonials.map((testimonial) => (
@@ -109,12 +114,12 @@ const Carrousel = () => {
                             className={`${slidesToShow === 1 ? '' : 'max-w-3xl'
                                 } space-x-6 h-[400px] flex items-center my-custom-class`}
                         >
-                            <div className="flex flex-col py-6 px-8 bg-white rounded-lg shadow-lg ml-3 mr-3 h-[246px] mx-auto">
+                            <div className={`flex flex-col py-6 px-8 bg-white rounded-lg shadow-lg ml-3 mr-3 h-[246px] mx-auto text-gray-700 ${theme === "dark" ? "" : "text-white bg-[#471d2c]"}`}>
                                 <div className="mb-5">
                                     <img src={testimonial.avatar} className="rounded-full w-14 h-14" alt="Avatar" style={{ display: "inline-block" }} />
                                     <p className="inline ml-3 mb-2">{testimonial.fullName}</p>
                                 </div>
-                                <p className="text-[#5E6282]">{testimonial.testimonial}</p>
+                                <p className={`text-[#5E6282] ${theme === "dark" ? "" : "text-white bg-[#471d2c]"}`}>{testimonial.testimonial}</p>
                             </div>
                         </div>
                     ))}

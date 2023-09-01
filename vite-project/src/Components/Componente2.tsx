@@ -1,12 +1,15 @@
 
 import '../styles.css'
+import { useTheme } from './theme-context';
 
 function Componente2() {
 
+  const { theme } = useTheme();
+
   return (
 
-    <div>
-      <div className="grid grid-cols-2 gap-1 h-full mx-auto w-4/5 pt-10">
+    <div className={` ${ theme === "dark" ? "" : "bg-[#151515] text-white"}`}>
+      <div className="grid grid-cols-2 gap-1 h-full mx-auto w-4/5 pt-10 sm:pt-0">
         <div className="grid grid-rows-3 gap-1 col-span-1 pr-5 pt-16 pb-16">
 
           <div className="row-span-1 my-auto mx-auto">
@@ -20,11 +23,11 @@ function Componente2() {
             </button>
           </div>
         </div>
-        <div className="col-span-1 h-full pl-5 "><img src="src\Screenshot_2.png" alt="" /></div>
+        <div className="col-span-1 pl-5 my-auto "><img src="src\Screenshot_2.png" alt="" /></div>
 
       </div>
 
-      <div className="object-contain mx-auto pt-20" style={{ width: '75%' }}>
+      <div className="object-contain mx-auto pt-20 w-[75%] sm:w-auto">
         <img src="src/Screenshot_3.png" alt="" />
       </div>
 

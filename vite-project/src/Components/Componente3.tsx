@@ -1,11 +1,14 @@
 
 import '../styles.css'
+import { useTheme } from './theme-context';
 
 function Componente3() {
 
+    const { theme } = useTheme();
+
     return (
 
-        <div>
+        <div className={` ${ theme === "dark" ? "" : "bg-[#151515] text-white"}`}>
             <div className="grid grid-cols-2 gap-1 h-full mx-auto w-4/5 pt-[6%] pb-[6%]">
 
                 <div className="col-span-1  pr-5 my-auto"><img src="src\Screenshot_4.png" alt="" /></div>

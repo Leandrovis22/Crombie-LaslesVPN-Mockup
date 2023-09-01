@@ -9,16 +9,19 @@ import Componente4 from './Components/Componente4'
 import Carrousel from './Components/Carrousel'
 import Form from './Components/Form'
 import Footer from './Components/Footer'
+import { ThemeProvider } from './Components/theme-context'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Componente1 />
-    <Componente2/>
-    <Componente3/>
-    <Subscription/>
-    <Componente4/>
-    <Carrousel/>
-    <Form/>
-    <Footer/>
+    <ThemeProvider>
+      <Componente1 />
+      <Componente2 />
+      <Componente3 />
+      <Subscription />
+      <Componente4 />
+      <Carrousel />
+      <Form />
+      <Footer />
+    </ThemeProvider>
   </React.StrictMode>,
 )
