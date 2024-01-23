@@ -23,12 +23,12 @@ function Componente2() {
             </button>
           </div>
         </div>
-        <div className="col-span-1 pl-5 my-auto "><img src="src\Screenshot_2.png" alt="" /></div>
+        <div className="col-span-1 pl-5 my-auto "><img src="/Screenshot_2.png" alt="" /></div>
 
       </div>
 
       
-        <img className='pt-20 w-full' src="src/Screenshot_3.png" alt="" />
+        <img className='pt-20 w-full' src="/Screenshot_3.png" alt="" />
      
 
 

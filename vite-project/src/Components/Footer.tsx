@@ -14,7 +14,7 @@ function Footer() {
                 <div className="my-auto col-span-1 pr-5">
 
 
-                    <img className='w-[34%] mb-2' src="src\Screenshot_1.png" alt="" />
+                    <img className='w-[34%] mb-2' src="/Screenshot_1.png" alt="" />
                     <p className="w-[67%] mb-6 row-span-1 my-auto "><span className="font-bold">LaslesVPN</span> is a private virtual network that has unique features and has high security.</p>
 
                     <div className='mb-6'>

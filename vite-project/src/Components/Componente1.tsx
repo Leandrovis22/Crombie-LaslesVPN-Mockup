@@ -40,7 +40,7 @@ const Componente1: React.FC = () => {
         <nav className="pt-5 ml-12 mr-12 px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="#" className="flex items-center">
-              <img src="src\Screenshot_1.png" className="h-auto" />
+              <img src="/Screenshot_1.png" className="h-auto" />
             </a>
             <div className="flex items-center lg:order-2">
               <a href="#" className=" font-bold text-black-800 hover:bg-red-50 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none">Sign in</a>
