@@ -5,9 +5,56 @@ type Suscription = {
   title: string;
   price: number | "Free";
   benefits: string[];
-  currency: "U$S" | "$ARG";
-  type: "monthly" | "daily" | "weekly";
+  currency: "U$S" | "$ARG" | "";
+  type: "monthly" | "daily" | "weekly" | "";
 };
+
+const mockData: Suscription[] = [
+  
+  {
+    title: "Free Plan",
+    price: "Free",
+    benefits: [
+      "Limited server locations",
+      "Basic encryption",
+      "Anonymous browsing",
+      "Ad-blocking"
+    ],
+    currency: "",
+    type: ""
+  },
+  {
+    title: "Premium",
+    price: 5,
+    benefits: [
+      "Unlimited server locations",
+      "Military-grade encryption",
+      "Streaming optimization",
+      "Multi-device support",
+      "No data logging",
+      "Global network"
+    ],
+    currency: "U$S",
+    type: "weekly"
+  },
+  {
+    title: "Deluxe",
+    price: 15,
+    benefits: [
+      "Dedicated IP address",
+      "24/7 customer support",
+      "Advanced security protocols",
+      "Access to premium servers",
+      "Fast and reliable connections",
+      "Unrestricted bandwidth"
+    ],
+    currency: "U$S",
+    type: "monthly"
+  }
+ ];
+ 
+ 
+ 
 
 const Subscription = () => {
 
@@ -15,22 +62,26 @@ const Subscription = () => {
 
   const [subscriptions, setSubcriptions] = useState<Suscription[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string>();
+  const [error] = useState<string>();
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription`)
-      .then((response) => {
-        response.json().then((result) => {
-          setSubcriptions(result);
-        });
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // fetch(`https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription`)
+    //   .then((response) => {
+    //     response.json().then((result) => {
+    //       setSubcriptions(result);
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     setError(error.message);
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //   });
+
+    setSubcriptions(mockData);
+
+    setLoading(false);
   }, []);
 
   if (loading) {
@@ -58,7 +109,7 @@ const Subscription = () => {
           >
             <p className="pt-5 text-lg font-bold mx-auto">{subscription.title}</p>
 
-            <div className="pl-[3.5rem] mt-[43px] space-y-4">
+            <div className="pl-[2.3rem] mt-[43px] space-y-4">
               {subscription.benefits.map((benefit, index) => (
                 <div className="flex items-center" key={index}>
                   <svg

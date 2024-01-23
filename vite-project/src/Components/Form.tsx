@@ -1,7 +1,4 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-import { object, string } from 'yup';
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { SubmitHandler } from "react-hook-form";
 import useForm1, { FormData } from "./useForm";
 import usePostData from "./usePostData";
 import { useEffect, useState } from "react";
